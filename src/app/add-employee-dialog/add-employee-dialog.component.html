@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Add Employee</h2>
+<div mat-dialog-content>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label style="font-family: 'Roboto', sans-serif;" for="firstname">First Name</label><br>
+        <input type="text" name="firstname" class="form-control" [(ngModel)]="data.employee.firstname" required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label style="font-family: 'Roboto', sans-serif;" for="lastname">Last Name</label><br>
+        <input type="text" name="lastname" class="form-control" [(ngModel)]="data.employee.lastname" required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label style="font-family: 'Roboto', sans-serif;" for="email">Email</label><br>
+        <input type="text" name="email" class="form-control" [(ngModel)]="data.employee.email" required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label style="font-family: 'Roboto', sans-serif;" for="jobtitle">Job Title</label><br>
+        <input type="text" name="jobtitle" class="form-control" [(ngModel)]="data.employee.jobtitle" required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label style="font-family: 'Roboto', sans-serif;" for="salary">Salary</label><br>
+        <input type="text" name="salary" class="form-control" [(ngModel)]="data.employee.salary" required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label style="font-family: 'Roboto', sans-serif;" for="department">Department</label><br>
+      <select name="department" class="form-control" [(ngModel)]="data.employee.department" required>
+        <option value="">Select Department</option>
+        <option value="IT">IT</option>
+        <option value="FINANCE">Finance</option>
+        <option value="OPERATIONS">Operations</option>
+        <option value="HR">HR</option>
+        <option value="MANAGEMENT">Management</option>
+      </select>
+    </div>
+    <pre></pre>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-button type="submit">Add</button>
+    </div>
+  </form>
+</div>
